@@ -5,21 +5,21 @@ import { BsMoonFill, BsSunFill } from "react-icons/bs";
 
 const themes = {
   winter: "winter",
-  dracula: "dracula",
+  night: "night",
 };
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState(themes.dracula);
+  const [theme, setTheme] = useState(themes.night);
 
   const toggleTheme = () => {
-    const newTheme = theme === themes.dracula ? themes.winter : themes.dracula;
+    const newTheme = theme === themes.night ? themes.winter : themes.night;
     document.documentElement.setAttribute("data-theme", newTheme);
     setTheme(newTheme);
   };
 
   return (
     <button onClick={toggleTheme} className="btn btn-sm btn-outline ">
-      {theme === "dracula" ? (
+      {theme === "night" ? (
         <BsSunFill className="h-4 w-4" />
       ) : (
         <BsMoonFill className="h-4 w-4" />
