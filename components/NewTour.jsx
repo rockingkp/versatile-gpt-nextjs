@@ -4,6 +4,7 @@ import React from "react";
 import TourInfo from "./TourInfo";
 import { useMutation } from "@tanstack/react-query";
 import { generateTourResponse } from "@/utils/action";
+import toast from "react-hot-toast";
 
 const NewTour = () => {
   const {
