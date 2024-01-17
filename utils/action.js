@@ -24,10 +24,6 @@ export const generateChatResponse = async (chatMessages) => {
   }
 };
 
-export const getExistingTour = async ({ city, country }) => {
-  return null;
-};
-
 export const generateTourResponse = async ({ city, country }) => {
   const query = `Find a exact ${city} in this exact ${country}.
 /* trunk-ignore(git-diff-check/error) */
@@ -69,6 +65,19 @@ If you can't find info on exact ${city}, or ${city} does not exist, or it's popu
   }
 };
 
+export const getExistingTour = async ({ city, country }) => {
+  return prisma.tour.findUnique({
+    where: {
+      city_country: {
+        city,
+        country,
+      },
+    },
+  });
+};
+
 export const createNewTour = async (tour) => {
-  return null;
+  return prisma.tour.create({
+    data: tour,
+  });
 };
