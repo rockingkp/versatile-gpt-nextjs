@@ -12,8 +12,7 @@ const SingleTourPage = async ({ params }) => {
   if (!tour) {
     redirect("/tours");
   }
-
-  const { data } = await axios(`${url}${tour.city}`);
+  const { data } = await axios.get(`${url}${tour.city}`);
   const tourImage = data?.results[0]?.urls?.raw;
 
   /* trunk-ignore(git-diff-check/error) */
