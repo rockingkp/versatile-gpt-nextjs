@@ -4,7 +4,7 @@ import {
   generateChatResponse,
   fetchUserTokensById,
   subtractTokens,
-} from "@/utils/actions";
+} from "@/utils/action";
 import { useMutation } from "@tanstack/react-query";
 import { useState } from "react";
 import toast from "react-hot-toast";

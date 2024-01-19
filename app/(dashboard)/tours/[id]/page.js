@@ -1,4 +1,5 @@
 import TourInfo from "@/components/TourInfo";
+import Image from "next/image";
 import { generateTourImage, getSingleTour } from "@/utils/action";
 import Link from "next/link";
 import { redirect } from "next/navigation";
